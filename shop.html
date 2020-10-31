@@ -1,0 +1,180 @@
+<!-- Programming Usable Interfaces -->
+<!-- Ember Liu-->
+<!-- Fall 2020 -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Ember's Cafe</title>
+    <link rel="icon" href="images/logo.png" />
+    <meta charset="utf-8" />
+    <meta name="author" content="Ember Liu" />
+    <meta name="keywords" content="Ember's Cafe" />
+    <meta name="description" content="Ember's Cafe" />
+    <meta
+      name="copyright"
+      content="Carnegie Mellon University 2020 and beyond..."
+    />
+    <meta name="viewport" content="width=device-width. initial-scale=1.0" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Custom Javascript -->
+    <script src="assets/js/main.js"></script>
+  </head>
+
+  <body onload="onLoad()">
+    <!-- Navbar -->
+    <div class="container">
+      <!-- Logo on top left -->
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="logo"/></a>
+      </div>
+
+      <!-- Top Navigation Bar-->
+      <div class="navbar">
+        <ul class="navbar-item">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="shop.html">Order</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="shoppingcart.html" id="cart"
+              ><i class="fa fa-shopping-cart"></i>
+              <span class="item-count" id="item-count">0</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <div class="row">
+      <div class="column">
+        <div class="product-filter-title">
+          <h2>Items</h2>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="filter-description">
+        </div>
+      </div>
+
+      <div class="column"></div>
+      <div class="column"></div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <div class="product-filter-list">
+          <p><a href="shop.html">Breads & Bagels</a></p>
+          <p><a href="shop.html">Cakes & Cupcakes</a></p>
+          <p><a href="shop.html">Cookies</a></p>
+          <p><a href="shop.html">Donuts</a></p>
+          <p class="selected"><a href="shop.html">Buns</a></p>
+          <p><a href="shop.html">Pies</a></p>
+        </div>
+      </div>
+
+      <div class="column vertical-line-left horizontal-line">
+        <a href="product_detail.html">
+          <img src="images/dumpling.jpg" alt="dumpling" class="product-image" />
+        </a>
+      </div>
+
+      <div class="column horizontal-line">
+        <div class="product-description">
+          <h2><a href="product_detail.html">Original Bun</a></h2>
+          <p>$3.00</p>
+          <p>In Stock</p>
+          <form class="bottom">
+            <button
+              class="learnmore"
+              type="submit"
+              formaction="product_detail.html"
+            >
+              Learn More
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="column"></div>
+    </div>
+
+    <div class="row pad-top">
+      <div class="column"></div>
+
+      <div class="column vertical-line-left horizontal-line">
+        <a href="product_detail.html">
+          <img src="images/Lemonade.jpeg" alt="Lemonade bun" class="product-image" />
+        </a>
+      </div>
+
+      <div class="column horizontal-line">
+        <div class="product-description">
+          <h2><a href="product_detail.html">Lemonade Bun</a></h2>
+          <p>$18.00</p>
+          <p>Sold Out</p>
+          <form class="bottom">
+            <button
+              class="learnmore"
+              type="submit"
+              formaction="product_detail.html"
+            >
+              Learn More
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="column"></div>
+    </div>
+
+    <div class="row pad-top">
+      <div class="column"></div>
+
+      <div class="column vertical-line-left horizontal-line">
+        <a href="product_detail.html">
+          <img
+            src="images/cinnamonroll.jpg"
+            alt="lemonade"
+            class="product-image"
+          />
+        </a>
+      </div>
+
+      <div class="column horizontal-line">
+        <div class="product-description">
+          <h2><a href="product_detail.html">Cinnamon Bun</a></h2>
+          <p>$3.00</p>
+          <p>In Stock</p>
+          <form class="bottom">
+            <button
+              class="learnmore"
+              type="submit"
+              formaction="product_detail.html"
+            >
+              Learn More
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="column"></div>
+    </div>
+
+    <div class="row pad-top"></div>
+
+    <!-- Footer -->
+    <div class="row pad-top">
+      <div class="footer-alt">
+        <footer>
+          <p>© Ember's Cafe, Inc. All rights reserved.</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

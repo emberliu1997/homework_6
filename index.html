@@ -1,0 +1,73 @@
+<!-- Programming Usable Interfaces -->
+<!-- Ember Liu-->
+<!-- Fall 2020 -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Ember's Cafe</title>
+    <link rel="icon" href="images/logo.png" />
+    <meta charset="utf-8" />
+    <meta name="author" content="Ember Liu" />
+    <meta name="keywords" content="Ember's Cafe" />
+    <meta name="description" content="Ember's Cafe" />
+    <meta
+      name="copyright"
+      content="Carnegie Mellon University 2020 and beyond..."
+    />
+    <meta name="viewport" content="width=device-width. initial-scale=1.0" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Custom Javascript -->
+    <script src="assets/js/main.js"></script>
+  </head>
+
+  <body onload="onLoad()">
+    <!-- Navbar -->
+    <div class="container">
+      <!-- Logo on top left -->
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="logo"/></a>
+      </div>
+
+      <!-- Top Navigation Bar-->
+      <div class="navbar">
+        <ul class="navbar-item">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="shop.html">Order</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="shoppingcart.html" id="cart"
+              ><i class="fa fa-shopping-cart"></i>
+              <span class="item-count" id="item-count">0</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <img src="images/header.jpg" class="headerpic" alt="Header Picture" />
+      <b class="centered">Fresh Dessert</b>
+      <b class="centered-2"> @ Ember's Cafe</b>
+      <div>
+        <form>
+          <button class="btn" type="submit" formaction="shop.html">
+            Order Now
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <footer>
+        <p>© 2020 Ember's Cafe, Inc. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>

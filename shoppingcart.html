@@ -1,0 +1,202 @@
+<!-- Programming Usable Interfaces -->
+<!-- Ember Liu-->
+<!-- Fall 2020 -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Ember's Cafe</title>
+    <link rel="icon" href="images/logo.png" />
+    <meta charset="utf-8" />
+    <meta name="author" content="Ember Liu" />
+    <meta name="keywords" content="Ember's Cafe" />
+    <meta name="description" content="Ember's Cafe" />
+    <meta
+      name="copyright"
+      content="Carnegie Mellon University 2020 and beyond..."
+    />
+    <meta name="viewport" content="width=device-width. initial-scale=1.0" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Custom Javascript -->
+    <script src="assets/js/main.js"></script>
+  </head>
+
+  <body onload="onLoad(); onLoadCartPage();">
+    <!-- Navbar -->
+    <div class="container">
+      <!-- Logo on top left -->
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="logo"/></a>
+      </div>
+
+      <!-- Top Navigation Bar-->
+      <div class="navbar">
+        <ul class="navbar-item">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="shop.html">Order</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="shoppingcart.html" id="cart"
+              ><i class="fa fa-shopping-cart"></i>
+              <span class="item-count" id="item-count">0</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Shopping Cart -->
+    <div class="row">
+      <div class="column">
+        <p class="product-filter-title">
+          <a href="shop.html">&#8592; Back</a>
+        </p>
+      </div>
+
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+    </div>
+
+    <div class="row horizontal-line-bot pad-left">
+      <div class="column">
+        <div class="shopping-cart">
+          <p class="cart-title">Shopping Cart</p>
+        </div>
+      </div>
+
+      <div class="column"></div>
+      <div class="column"></div>
+
+      <div class="column">
+        <div class="cart-price">
+          <p>Price</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="dumpling">
+      <div class="column">
+        <div>
+          <img src="images/dumpling.jpg" alt="dumpling" class="cart-image" />
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="cart-description">
+          <a href="product_detail.html"><h2>Original Bun</h2></a>
+          <p>Less Sweet | None</p>
+        </div>
+        <label class="quantity-label" for="dumplingPrice">Quantity:</label>
+        <div class="add-qty">
+          <select
+            class="input"
+            name="quantity"
+            id="dumplingPrice"
+            onChange="changeQuantity(this.id);"
+          >
+            <option value="1" selected>1</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+            <option value="12">12</option>
+            <option value="24">24</option>
+          </select>
+        </div>
+        <div>
+          <button
+            class="delete"
+            id="dumplingDelete"
+            onclick="removeItem(this.id)"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+
+      <div class="column">
+        <button class="instock">In Stock</button>
+      </div>
+
+      <div class="column">
+        <p class="item-price" id="dumplingPriceChange">$3.00</p>
+      </div>
+    </div>
+
+    <template>
+      <div class="row" id="template">
+        <div class="column">
+          <div>
+            <img
+              src="images/cinnamonrollmain.jpg"
+              alt="cinnamon-roll"
+              class="cart-image"
+              id="selected-image"
+            />
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="cart-description">
+            <a href="product_detail.html"><h2> Cinnamon Bun</h2></a>
+            <p id="user-selection">Blackberry | Vanilla-milk</p>
+          </div>
+          <label class="quantity-label" for="itemQty">Quantity:</label>
+          <div class="add-qty">
+            <select
+              class="input"
+              name="quantity"
+              id="itemQty"
+              onChange="changeQuantity(this.id);"
+            >
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="9">9</option>
+              <option value="12">12</option>
+              <option value="15">15</option>
+              <option value="18">18</option>
+              <option value="21">21</option>
+              <option value="24">24</option>
+            </select>
+          </div>
+          <div>
+            <button
+              class="delete"
+              id="delete-button"
+              onclick="removeItem(this.id)"
+            >
+              Remove
+            </button>
+          </div>
+        </div>
+
+        <div class="column">
+          <button class="instock">In Stock</button>
+        </div>
+
+        <div class="column">
+          <p class="item-price" id="itemQtyChange">$3.00</p>
+        </div>
+      </div>
+    </template>
+
+    <div class="row horizontal-line-top" id="subtotal-divider">
+      <div class="column"></div>
+
+      <div class="column"></div>
+
+      <div class="column"></div>
+
+      <div class="column">
+        <p class="subtotal-price" id="subtotal">
+          Subtotal:
+          <span id="subtotal-price">$6.00</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
